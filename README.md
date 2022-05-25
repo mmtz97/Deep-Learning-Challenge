@@ -1,5 +1,22 @@
 # Deep-Learning-Challenge: Charity Funding Predictor
 
+## Data Preprocessing
+* The target of our model is the binary value “IS_SUCCESSFUL” column. Which gives the detail that the money was use effective. 
+* The features of our model included the name, application, type, affiliation, classification, use_case, organization, activity status, income amount, ask_amt, and special considerations column.
+* We removed the employer identification number due to the numbers can confuse the system into thinking its significant. We removed name due to it being unique.
+
+## Compiling, Training and Evaluating the Model
+* For our model, we trained a neural network with 2 hidden layers test with 20, 50 and 100 neurons to allow for more comparisons between the 40+ features in the cleaned data using fewer epochs and determine a range of neurons in each hidden layer and compare how they impacted results.
+* We were able to achieve a target model performance of 75% with this model with a 78% accuracy.
+* To increase the model performance, we attempted to convert the name column into data points, which would have a major impact on improving its effciency. And used "sigmoid" activation function for both the 2nd/3rd layer. 
+
+## Summary of Results:
+Our deep learning model returned an accuracy of 78.87% which were able to correctly classify each points in the test data 75% of the time. And has a 80% chance of being successful by having the following:
+* Name appears more than 5 times
+* The application is one of the following: T3, T4, T5, T6, T7, T8, T9, T10, T19
+* The classificaiton is one the following: C1000, C2000, C3000, C1200, and C2100
+Recommend the Random Forest model because the model is good to solve this classification problem. This model produces a 78% accuracy.
+
 ## Background
 
 The non-profit foundation Alphabet Soup wants to create an algorithm to predict whether or not applicants for funding will be successful. With your knowledge of machine learning and neural networks, you’ll use the features in the provided dataset to create a binary classifier that is capable of predicting whether applicants will be successful if funded by Alphabet Soup.
